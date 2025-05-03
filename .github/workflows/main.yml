@@ -1,0 +1,11 @@
+name: HTML Validator
+
+on: [push]
+
+jobs:
+  check-html:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate HTML
+        uses: mikeal/htmlhint-action@master
